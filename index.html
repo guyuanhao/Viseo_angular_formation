@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html ng-app="chicQcmApp">
+<body ng-controller="MainCtrl">
+
+	<input type="text"
+	ng-model="name"
+	placeholder="Enter your name">
+	<h1>Hello <span ng-bind="name"></span></h1>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.6/angular.min.js"></script>
+  <script src="./module/appModule.js"></script>
+  <script src="./controller/mainCtrl.js"></script>
+</body>
+</html>
