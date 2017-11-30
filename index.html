@@ -1,11 +1,14 @@
 <!DOCTYPE html>
 <html ng-app="chicQcmApp">
-<body ng-controller="MainCtrl">
+<body ng-controller="MainCtrl as ctrl">
 
-	<input type="text"
-	ng-model="name"
-	placeholder="Enter your name">
-	<h1>Hello <span ng-bind="name"></span></h1>
+	<h1>QCM</h1>
+
+	<div ng-repeat="qcm in ctrl.qcms">
+			<span ng-click="ctrl.selectQCM(qcm)">{{qcm.label}}</span>
+	</div>
+
+	<span>QCM selected : {{ctrl.selectedQCM.label}}</span>
 
 	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.6/angular.min.js"></script>
   <script src="./module/appModule.js"></script>
